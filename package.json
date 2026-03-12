@@ -10,16 +10,35 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "mlang",
-      "aliases": ["MLang", "mlang"],
-      "extensions": [".mlang"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "mlang",
-      "scopeName": "source.mlang",
-      "path": "./syntaxes/mlang.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "mlang",
+        "aliases": [
+          "MLang",
+          "mlang"
+        ],
+        "extensions": [
+          ".mlang"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icon.png",
+          "dark": "./icon.png"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "mlang",
+        "scopeName": "source.mlang",
+        "path": "./syntaxes/mlang.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "mlang",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
   }
 }
