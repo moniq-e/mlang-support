@@ -1,6 +1,9 @@
 {
     "Store": {
-        "prefix": "str",
+        "prefix": [
+            "str",
+            "STR"
+        ],
         "body": [
             "STR ${1:address} ${2:value}",
             "$0"
@@ -8,7 +11,10 @@
         "description": "Store a literal value to a memory address"
     },
     "Print": {
-        "prefix": "prt",
+        "prefix": [
+            "prt",
+            "PRT"
+        ],
         "body": [
             "PRT ${1:address}",
             "$0"
@@ -16,7 +22,10 @@
         "description": "Print the value at the specified address"
     },
     "Add": {
-        "prefix": "add",
+        "prefix": [
+            "add",
+            "ADD"
+        ],
         "body": [
             "ADD ${1:dest} ${2:addr1} ${3:addr2}",
             "$0"
@@ -24,7 +33,10 @@
         "description": "Add values at addr1 and addr2 and store result at dest"
     },
     "Compare": {
-        "prefix": "cmp",
+        "prefix": [
+            "cmp",
+            "CMP"
+        ],
         "body": [
             "CMP ${1:dest} ${2:addr1} ${3:addr2}",
             "$0"
@@ -32,7 +44,10 @@
         "description": "Compare values at addr1 and addr2, store comparison result (-1, 0, 1) at dest"
     },
     "Region": {
-        "prefix": "reg",
+        "prefix":[
+            "reg",
+            "REG"
+        ],
         "body": [
             "REG ${1:dest} ${2:end}",
             "$0"
@@ -40,7 +55,10 @@
         "description": "Create a region and store it at dest, then jump to end"
     },
     "End": {
-        "prefix": "end",
+        "prefix": [
+            "end",
+            "END"
+        ],
         "body": [
             "END",
             "$0"
@@ -48,7 +66,10 @@
         "description": "Mark the end of a region"
     },
     "Enter": {
-        "prefix": "ent",
+        "prefix": [
+            "ent",
+            "ENT"
+        ],
         "body": [
             "ENT ${1:address}",
             "$0"
@@ -56,7 +77,10 @@
         "description": "Jump to the region stored at address one time"
     },
     "Jump": {
-        "prefix": "jmp",
+        "prefix": [
+            "jmp",
+            "JMP"
+        ],
         "body": [
             "JMP ${1:address}",
             "$0"
@@ -64,7 +88,10 @@
         "description": "Jump to the region stored at address"
     },
     "Equal Jump": {
-        "prefix": "eqj",
+        "prefix": [
+            "eqj",
+            "EQJ"
+        ],
         "body": [
             "EQJ ${1:addr1} ${2:addr2} ${3:dest}",
             "$0"
@@ -72,7 +99,10 @@
         "description": "If values at addr1 and addr2 are equal, jump to the region stored at dest"
     },
     "Not Equal Jump": {
-        "prefix": "nej",
+        "prefix": [
+            "nej",
+            "NEJ"
+        ],
         "body": [
             "NEJ ${1:addr1} ${2:addr2} ${3:dest}",
             "$0"
@@ -80,7 +110,10 @@
         "description": "If values at addr1 and addr2 are not equal, jump to the region stored at dest"
     },
     "Break": {
-        "prefix": "brk",
+        "prefix": [
+            "brk",
+            "BRK"
+        ],
         "body": [
             "BRK",
             "$0"

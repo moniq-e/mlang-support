@@ -11,18 +11,24 @@
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.mlang",
-				"match": "\\b(?i)(STR|ADD|NEJ|PRT|REG|CMP|BRK|END|ENT|JMP|EQJ)\\b"
-			},
-			{
-				"name": "constant.numeric",
-				"match": "\\d+"
-			},
-			{
-				"name": "variable.parameter",
-				"match": "_+"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.mlang",
+					"match": "\\b(?i)(STR|ADD|NEJ|PRT|REG|CMP|BRK|END|ENT|JMP|EQJ)\\b"
+				},
+				{
+					"name": "constant.numeric",
+					"match": "\\d+"
+				},
+				{
+					"name": "variable.parameter",
+					"match": "_+"
+				},
+				{
+					"name": "variable.name",
+					"match": "'\\w+"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.mlang",
