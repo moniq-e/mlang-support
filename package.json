@@ -18,7 +18,8 @@
           "mlang"
         ],
         "extensions": [
-          ".mlang"
+          ".mlang",
+          ".mlang.old"
         ],
         "configuration": "./language-configuration.json",
         "icon": {
