@@ -116,10 +116,10 @@
             "FOR"
         ],
         "body": [
-            "FOR ${1:dest} ${2:addr_length} ${3:addr_i}",
+            "FOR ${1:dest} ${2:lengthaddr} ${3:iaddr}",
             "$0"
         ],
-        "description": "Jump to the region stored at dest until value at addr_length is equals to value at addr_i"
+        "description": "Jump to the region stored at dest until value at lengthaddr is equals to value at iaddr"
     },
     "Break": {
         "prefix": [
