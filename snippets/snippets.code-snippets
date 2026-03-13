@@ -49,8 +49,9 @@
             "REG"
         ],
         "body": [
-            "REG ${1:dest} ${2:end}",
-            "$0"
+            "REG ${1:dest} _",
+            "$0",
+            "END"
         ],
         "description": "Create a region and store it at dest, then jump to end"
     },
@@ -109,14 +110,24 @@
         ],
         "description": "If values at addr1 and addr2 are not equal, jump to the region stored at dest"
     },
+    "For": {
+        "prefix": [
+            "for",
+            "FOR"
+        ],
+        "body": [
+            "FOR ${1:dest} ${2:addr_length} ${3:addr_i}",
+            "$0"
+        ],
+        "description": "Jump to the region stored at dest until value at addr_length is equals to value at addr_i"
+    },
     "Break": {
         "prefix": [
             "brk",
             "BRK"
         ],
         "body": [
-            "BRK",
-            "$0"
+            "BRK"
         ],
         "description": "End the program execution"
     }

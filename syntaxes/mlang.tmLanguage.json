@@ -14,7 +14,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.mlang",
-					"match": "\\b(?i)(STR|ADD|NEJ|PRT|REG|CMP|BRK|END|ENT|JMP|EQJ)\\b"
+					"match": "\\b(?i)(STR|ADD|NEJ|PRT|REG|CMP|BRK|END|ENT|JMP|EQJ|FOR)\\b"
 				},
 				{
 					"name": "constant.numeric",
