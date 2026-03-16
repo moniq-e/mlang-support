@@ -55,6 +55,17 @@
         ],
         "description": "Create a region and store it at dest, then jump to end"
     },
+    "Free": {
+        "prefix":[
+            "fre",
+            "FRE"
+        ],
+        "body": [
+            "FRE ${1:address}",
+            "$0"
+        ],
+        "description": "Free a variable (address) to be reused and free memory space"
+    },
     "End": {
         "prefix": [
             "end",
