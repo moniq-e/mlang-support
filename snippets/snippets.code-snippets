@@ -21,6 +21,17 @@
         ],
         "description": "Print the value at the specified address"
     },
+    "Print String": {
+        "prefix": [
+            "prs",
+            "PRS"
+        ],
+        "body": [
+            "PRS ${1:address}",
+            "$0"
+        ],
+        "description": "Print the string at the specified address"
+    },
     "Add": {
         "prefix": [
             "add",
