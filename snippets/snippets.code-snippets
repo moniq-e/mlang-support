@@ -5,10 +5,10 @@
             "STR"
         ],
         "body": [
-            "STR ${1:address} ${2:value}",
+            "STR ${1:size} ${2:address} ${3:value}",
             "$0"
         ],
-        "description": "Store a literal value to a memory address"
+        "description": "Store a literal value to a memory address within size"
     },
     "Print": {
         "prefix": [
