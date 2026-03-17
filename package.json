@@ -2,6 +2,7 @@
   "name": "mlang-support",
   "displayName": "MLang Support",
   "description": "",
+  "publisher": "Monique",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.106.0"
