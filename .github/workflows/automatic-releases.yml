@@ -21,7 +21,7 @@ jobs:
       - name: Install VSCE
       - run: npm i -g @vscode/vsce
 
-      - name: Build with VSCE
+      - name: Download MLang environment
       - run: curl https://jitpack.io/com/github/moniq-e/mlang/v0.1.0-alpha/mlang-v0.1.0-alpha.jar -o mlang.jar
 
       - name: Build with VSCE
