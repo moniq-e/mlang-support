@@ -1,6 +1,7 @@
 {
   "name": "mlang-support",
   "displayName": "MLang Support",
+  "main": "./extension.js",
   "description": "",
   "publisher": "Monique",
   "version": "0.0.1",
@@ -41,6 +42,22 @@
         "language": "mlang",
         "path": "./snippets/snippets.code-snippets"
       }
-    ]
+    ],
+    "commands": [
+      {
+        "command": "mlang.runFile",
+        "title": "Execute MLang file",
+        "icon": "$(play)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "mlang.runFile",
+          "group": "navigation",
+          "when": "resourceLangId == mlang"
+        }
+      ]
+    }
   }
 }
