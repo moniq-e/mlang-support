@@ -13,7 +13,7 @@ function activate(context) {
 
             const jarPath = path.join(context.extensionPath, 'mlang.jar');
             const filePath = editor.document.fileName;
-            terminal.sendText(`java -jar "${jarPath}" "${filePath}`);
+            terminal.sendText(`java -jar "${jarPath}" "${filePath}"`);
         }
     });
 
