@@ -3,7 +3,7 @@ name: Automatic Releases
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   release:
