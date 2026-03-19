@@ -1,0 +1,45 @@
+name: Automatic Releases
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+
+    runs-on: "ubuntu-latest"
+    permissions:
+      contents: write
+      packages: write
+      pull-requests: "read"
+
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+
+      - name: Install VSCE
+      - run: npm i -g @vscode/vsce
+
+      - name: Build with VSCE
+      - run: curl https://jitpack.io/com/github/moniq-e/mlang/v0.1.0-alpha/mlang-v0.1.0-alpha.jar -o mlang.jar
+
+      - name: Build with VSCE
+      - run: npx vsce package --allow-missing-repository
+
+      - name: Publish to GitHub Packages Apache Maven
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "<settings><servers><server><id>github</id><username>moniq-e</username><password>${GITHUB_TOKEN}</password></server></servers></settings>" > ~/.m2/settings.xml
+          mvn clean deploy
+
+      - name: Publish release files
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: v0.0.1
+          prerelease: true
+          title: 0.0.1a
+          files: |
+            mlang-support-0.0.1.vsix
