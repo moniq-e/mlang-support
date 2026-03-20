@@ -30,7 +30,7 @@ async function downloadMLangExec(context) {
     try {
         //await vscode.workspace.fs.createDirectory(context.extensionPath)
 
-        const fileUri = vscode.Uri.joinPath(context.extensionPath, "mlang.jar")
+        const fileUri = vscode.Uri.joinPath(context.extensionUri, "mlang.jar")
 
         const response = await fetch("https://jitpack.io/com/github/moniq-e/mlang/v0.1.0/mlang-v0.1.0.jar")
         const arrayBuffer = await response.arrayBuffer()
