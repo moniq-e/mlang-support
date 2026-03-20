@@ -37,7 +37,7 @@ async function downloadMLangExec(context) {
         const data = new Uint8Array(arrayBuffer)
 
         await vscode.workspace.fs.writeFile(fileUri, data)
-        fs.chmodSync(fileUri.path, 0o755)
+        fs.chmodSync(fileUri.fsPath, 0o755)
 
         console.log(`Salvo em: ${fileUri.fsPath}`)
     } catch (err) {
